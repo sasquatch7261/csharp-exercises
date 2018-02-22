@@ -1,0 +1,29 @@
+﻿@model UserSignUp.ViewModels.AddUserViewModel;
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Add</h2>
+
+<form method="post">
+
+    <label asp-for="Username"></label>
+    <input asp-for="Username" value="@ViewBag.username" />
+    <span asp-validation-for="Username"></span>
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" value="@ViewBag.email" />
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+
+    <label asp-for="Verify"></label>
+    <input asp-for="Verify" />
+    <span asp-validation-for="Verify"></span>
+
+    <input type="submit" value="Submit" />
+
+</form>
